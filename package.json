@@ -1,5 +1,5 @@
 {
-  "name": "webpack-5.0-template",
+  "name": "pos-system-tech-giants",
   "version": "1.0.0",
   "description": "",
   "main": "src/scripts/main.js",
@@ -9,7 +9,7 @@
     "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Brandon Highland, Dimitric Brown, Jovanni Feliz, Alexis Hammer, Riley Tullis",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.2.0",
