@@ -4,6 +4,7 @@ import ViewDirectorBasedOnUserAuthStatus from './helpers/viewDirector';
 // import checkLoginStatus from './helpers/auth';
 import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
+import ViewDirectorBasedOnUserAuthStatus from './helpers/viewDirector';
 
 const init = () => {
   ViewDirectorBasedOnUserAuthStatus();
