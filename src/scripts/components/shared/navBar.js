@@ -28,7 +28,7 @@ const navBar = () => {
   </div>
 </nav>`;
 
-  renderToDom('#navigaion', domString);
+  renderToDom('#navigation', domString);
 };
 
 export default navBar;
