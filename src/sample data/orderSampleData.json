@@ -1,0 +1,32 @@
+{
+    "orders": [
+      {
+        "order_name": "Order 001",
+        "order_status": "open",
+        "customer_phone": "+1 (123) 456-7890",
+        "customer_email": "customer1@example.com",
+        "order_type": "phone",
+        "firebaseKey": "",
+        "uid": ""
+      },
+      {
+        "order_name": "Order 002",
+        "order_status": "closed",
+        "customer_phone": "+1 (234) 567-8901",
+        "customer_email": "customer2@example.com",
+        "order_type": "in-person",
+        "firebaseKey": "",
+        "uid": ""
+      },
+      {
+        "order_name": "Order 003",
+        "order_status": "open",
+        "customer_phone": "+1 (345) 678-9012",
+        "customer_email": "customer3@example.com",
+        "order_type": "in-person",
+        "firebaseKey": "",
+        "uid": ""
+      }
+    ]
+  }
+  
