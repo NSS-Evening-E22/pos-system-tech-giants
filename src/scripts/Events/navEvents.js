@@ -1,16 +1,17 @@
+import getItems from '../../api/itemData';
 import signOut from '../helpers/signOut';
 
-const navigationEvents = (user) => {
+const navigationEvents = () => {
   // LOGOUT BUTTON
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
 
   document.querySelector('#view-orders').addEventListener('click', () => {
-    (user.uid).then();
+    getItems().then(showItems)
   });
 
   document.querySelector('#create-order').addEventListener('click', () => {
-    (user.uid).then();
+    // Create order Form call
   });
 
   // STRETCH: SEARCH

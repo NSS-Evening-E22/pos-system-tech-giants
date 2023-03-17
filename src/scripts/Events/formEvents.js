@@ -1,7 +1,9 @@
-const formEvents = (user) => {
+import getItems from '../../api/itemData';
+
+const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
-    if (e.target.id.includes('update-book')) {
+    if (e.target.id.includes('edit-item')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         name: document.querySelector('name').value,
@@ -10,7 +12,7 @@ const formEvents = (user) => {
       };
 
       (payload).then(() => {
-        (user.uid).then();
+        getItems().then(showItems)
       });
     }
   });
