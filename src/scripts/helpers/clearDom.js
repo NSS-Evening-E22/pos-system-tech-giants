@@ -5,6 +5,7 @@ const clearDom = () => {
   // document.querySelector('#view').innerHTML = '';
   // document.querySelector('#cards').innerHTML = '';
   // document.querySelector('#filter-buttons').innerHTML = '';
+
 };
 
 export default clearDom;
