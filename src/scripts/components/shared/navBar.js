@@ -8,7 +8,7 @@ const navBar = () => {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">Hidden brand</a>
+      <a class="navbar-brand" href="#">Riley's PIKZA</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#" id="view-orders">View Orders</a>

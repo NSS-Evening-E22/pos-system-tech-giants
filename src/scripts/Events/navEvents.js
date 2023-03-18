@@ -1,4 +1,3 @@
-
 import getOrders from '../../api/orderData';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
 import getItems from '../../api/itemData';
@@ -10,8 +9,7 @@ const navigationEvents = () => {
     .addEventListener('click', signOut);
 
   document.querySelector('#view-orders').addEventListener('click', () => {
-
-    getItems().then(showItems)
+    getItems().then(showItems);
   });
 
   document.querySelector('#create-order').addEventListener('click', () => {

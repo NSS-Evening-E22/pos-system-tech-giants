@@ -12,7 +12,7 @@ const formEvents = () => {
       };
 
       (payload).then(() => {
-        getItems().then(showItems)
+        getItems().then(showItems);
       });
     }
   });
