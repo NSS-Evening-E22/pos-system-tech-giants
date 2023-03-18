@@ -1,5 +1,6 @@
 import getOrders from '../../api/orderData';
 import editOrderForm from '../components/shared/pages/editOrder';
+import homeLoggedIn from '../components/shared/pages/homeLoggedIn';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
 import signOut from '../helpers/signOut';
 
@@ -14,6 +15,10 @@ const navigationEvents = () => {
 
   document.querySelector('#create-order').addEventListener('click', () => {
     editOrderForm();
+  });
+
+  document.querySelector('#welcome-page').addEventListener('click', () => {
+    homeLoggedIn();
   });
 
   document.querySelector('#search-btn').addEventListener('click', () => {
