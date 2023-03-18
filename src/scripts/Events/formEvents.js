@@ -1,4 +1,5 @@
-import getItems from '../../api/itemData';
+import { createOrder, getOrders } from '../../api/orderData';
+import { viewAllOrders } from '../components/shared/pages/viewOrders';
 
 const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -12,10 +13,26 @@ const formEvents = () => {
       };
 
       (payload).then(() => {
-        getItems().then(); // deleted showItems temporarily
+        getOrders().then(viewAllOrders);
+      });
+    }
+
+    if (e.target.id.includes('submit-order')) {
+      const payload = {
+        name: document.querySelector('#order-name').value,
+        phone: document.querySelector('#customer-phone').value,
+        email: document.querySelector('#customer-email').value,
+        price: document.querySelector('#price').value,
+      };
+
+      createOrder(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+
+        getOrders(patchPayload).then(() => {
+          getOrders().then(viewAllOrders);
+        });
       });
     }
   });
 };
-
 export default formEvents;
