@@ -1,5 +1,7 @@
+
 import getOrders from '../../api/orderData';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
+import getItems from '../../api/itemData';
 import signOut from '../helpers/signOut';
 
 const navigationEvents = () => {
@@ -9,9 +11,11 @@ const navigationEvents = () => {
 
   document.querySelector('#view-orders').addEventListener('click', () => {
 
+    getItems().then(showItems)
   });
 
   document.querySelector('#create-order').addEventListener('click', () => {
+    // Create order Form call
 
   });
   document.querySelector('#search-btn').addEventListener('click', () => {
