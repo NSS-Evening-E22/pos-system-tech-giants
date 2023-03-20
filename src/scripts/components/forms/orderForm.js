@@ -1,5 +1,5 @@
-import renderToDom from '../helpers/renderToDom';
-import clearDom from '../helpers/clearDom';
+import renderToDom from '../../helpers/renderToDom';
+import clearDom from '../../helpers/clearDom';
 
 const addEditorderForm = (obj = {}) => {
   clearDom();

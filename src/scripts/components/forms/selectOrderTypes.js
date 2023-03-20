@@ -1,4 +1,3 @@
-
 import renderToDom from '../../helpers/renderToDom';
 
 const selectOrdTypes = (typeId) => {

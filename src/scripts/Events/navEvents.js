@@ -1,5 +1,5 @@
 import getOrders from '../../api/orderData';
-import editOrderForm from '../components/shared/pages/editOrder';
+import addEditorderForm from '../components/forms/orderForm';
 import homeLoggedIn from '../components/shared/pages/homeLoggedIn';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
 import signOut from '../helpers/signOut';
@@ -14,7 +14,7 @@ const navigationEvents = () => {
   });
 
   document.querySelector('#create-order').addEventListener('click', () => {
-    editOrderForm();
+    addEditorderForm();
   });
 
   document.querySelector('#welcome-page').addEventListener('click', () => {
