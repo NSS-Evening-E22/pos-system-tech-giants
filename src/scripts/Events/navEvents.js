@@ -1,6 +1,7 @@
 import { getOrders } from '../../api/orderData';
 import addEditorderForm from '../components/forms/orderForm';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
+import homeLoggedIn from '../components/shared/pages/homeLoggedIn';
 import signOut from '../helpers/signOut';
 
 const navigationEvents = () => {
