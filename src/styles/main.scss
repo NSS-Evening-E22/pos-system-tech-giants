@@ -19,12 +19,18 @@ body {
 .card {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(60, 77, 170);
-  color: rgb(212, 144, 55);
+  background-color: rgb(60, 77, 170,);
+  color: rgb(212, 144, 55, 1.0);
   margin: 5px;
   font-family: monospace;
+  opacity: 0.7;
 }
 
 .welcome{
-  color: rgb(250, 58, 154);
+  color: rgb(253, 35, 144);
+}
+
+#form-container{
+  color: rgb(247, 41, 219);
+  font-size: x-large;
 }
