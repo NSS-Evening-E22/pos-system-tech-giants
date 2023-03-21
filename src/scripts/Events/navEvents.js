@@ -1,5 +1,6 @@
 import { getOrders } from '../../api/orderData';
 import addEditorderForm from '../components/forms/orderForm';
+import homeLoggedIn from '../components/shared/pages/homeLoggedIn';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
 import signOut from '../helpers/signOut';
 

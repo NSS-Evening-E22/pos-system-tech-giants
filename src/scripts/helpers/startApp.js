@@ -1,4 +1,4 @@
-import getOrders from '../../api/orderData';
+import { getOrders } from '../../api/orderData';
 import logoutButton from '../components/logoutButton';
 import domBuilder from '../components/shared/domBuilder';
 import navBar from '../components/shared/navBar';
