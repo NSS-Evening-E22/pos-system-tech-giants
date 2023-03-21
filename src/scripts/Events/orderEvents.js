@@ -6,7 +6,6 @@ import { viewAllOrders } from '../components/shared/pages/viewOrders';
 
 const orderEvents = () => {
   document.querySelector('#order-container').addEventListener('click', (e) => {
-    console.warn('Clicked Order-Container');
     if (e.target.id.includes('delete-card')) {
       console.warn('Clicked Delete');
       const [, firebaseKey] = e.target.id.split('--');
