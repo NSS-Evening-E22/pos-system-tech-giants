@@ -5,7 +5,7 @@ import navBar from '../components/shared/navBar';
 import homeLoggedIn from '../components/shared/pages/homeLoggedIn';
 import domEvents from '../Events/domEvents';
 import formEvents from '../Events/formEvents';
-import navEvents from '../Events/navEvents';
+import navigationEvents from '../Events/navEvents';
 import orderEvents from '../Events/orderEvents';
 
 const startApp = () => {
@@ -15,7 +15,7 @@ const startApp = () => {
   orderEvents(); // CRUD ON INDIVIDUAL ORDERS
   navBar(); // DYNAMICALLY ADD THE NAV
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
-  navEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
+  navigationEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
   getOrders();
   homeLoggedIn(); // STARTS AS THE APP LOADS
 };
