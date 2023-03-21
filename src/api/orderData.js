@@ -20,4 +20,22 @@ const getOrders = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getOrders;
+const createOrder = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/order.json`, {
+    method: 'POST',
+    headers: {
+      'content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+export { getOrders, createOrder };
