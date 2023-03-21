@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import loginButton from '../components/loginButton';
+import homeLoggedOut from '../components/shared/pages/homeLoggedOut';
 import client from './client';
 import startApp from './startApp';
 
@@ -11,7 +11,7 @@ const ViewDirectorBasedOnUserAuthStatus = () => {
       startApp(user);
     } else {
       // person is NOT logged in
-      loginButton();
+      homeLoggedOut();
     }
   });
 };
