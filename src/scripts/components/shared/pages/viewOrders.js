@@ -17,9 +17,9 @@ const viewAllOrders = (array) => {
         <h5>${item.order_name}</h5>
         <p class="card-text">${item.order_description}</p>
         <hr>
-        <i id="details-card--${item.firebaseKey}' class="btn btn-info">Details</i>
-        <i id="edit-card--${item.firebaseKey}' class="btn">Edit</i>
-        <i id="delete-card--${item.firebaseKey}' class="btn but-danger">Delete</i>
+        <i class ='fas fa-forward' id="details-card--${item.firebaseKey}' class="btn btn-info">Details</i>
+        <i class ='fas fa-pause' id="edit-card--${item.firebaseKey}' class="btn">Edit</i>
+        <i class ='fas fa-redo' id="delete-card--${item.firebaseKey}' class="btn but-danger">Delete</i>
       </div>
     </div>`;
   });
@@ -32,6 +32,7 @@ const viewSingleOrder = (obj) => {
   const orderString = `
     <div class="card">
       <div class="card-body">
+      <h5>${obj.order_name}</h5>
         <p class="card-text">${obj.order_description}</p>
         <hr>
         <i id="details-card--${obj.firebaseKey}' class="btn btn-info">Details</i>
