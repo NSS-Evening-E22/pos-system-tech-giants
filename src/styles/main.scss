@@ -3,8 +3,28 @@
 
 
 body {
-  background-color: rgb(126, 112, 92);
+  background-image: url(https://wallpapers.com/images/high/90s-taco-bell-cup-design-so2bza2hwy06j2u9.jpg);
+  background-color: rgb(23, 137, 165);
   color: antiquewhite;
   text-align: center;
   margin-top: 100px;
+}
+
+.navbar {
+  font-family: 'Franklin Gothic Medium';
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(60, 77, 170);
+  color: rgb(212, 144, 55);
+  margin: 5px;
+  font-family: monospace;
+}
+
+.welcome{
+  color: rgb(250, 58, 154);
 }
