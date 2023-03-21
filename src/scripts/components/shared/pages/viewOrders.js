@@ -32,7 +32,6 @@ const viewSingleOrder = (obj) => {
   const orderString = `
     <div class="card">
       <div class="card-body">
-        <h5>${obj.order_name}</h5>
         <p class="card-text">${obj.order_description}</p>
         <hr>
         <i id="details-card--${obj.firebaseKey}' class="btn btn-info">Details</i>

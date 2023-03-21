@@ -1,8 +1,9 @@
+import getOrderDetails from '../../api/mergedData';
 import {
   deleteOrders, getOrders, getSingleOrder, updateOrder
 } from '../../api/orderData';
 import editOrderForm from '../components/shared/pages/editOrder';
-import { viewAllOrders } from '../components/shared/pages/viewOrders';
+import { viewAllOrders, viewSingleOrder } from '../components/shared/pages/viewOrders';
 
 const orderEvents = () => {
   document.querySelector('#order-container').addEventListener('click', (e) => {
@@ -16,6 +17,12 @@ const orderEvents = () => {
       const [, firebaseKey] = e.target.id.split('--');
 
       getSingleOrder(firebaseKey).then((order) => editOrderForm(order));
+    }
+
+    if (e.target.id.includes('details-card')) {
+      const [, firebaseKey] = e.target.id.split('--');
+
+      getOrderDetails(firebaseKey).then(viewSingleOrder);
     }
   });
 
