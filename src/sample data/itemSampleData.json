@@ -1,0 +1,23 @@
+{
+    "items": [
+      {
+        "name": "Item 1",
+        "price": 10.99,
+        "firebaseKey": "",
+        "uid": ""
+      },
+      {
+        "name": "Item 2",
+        "price": 19.99,
+        "firebaseKey": "",
+        "uid": ""
+      },
+      {
+        "name": "Item 3",
+        "price": 7.50,
+        "firebaseKey": "",
+        "uid": ""
+      }
+    ]
+  }
+  

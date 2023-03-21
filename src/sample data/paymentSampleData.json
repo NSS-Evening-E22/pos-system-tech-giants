@@ -1,0 +1,32 @@
+{
+    "payments": [
+      {
+        "total_amount": 50.00,
+        "date": "2023-03-16",
+        "payment_type": "Credit Card",
+        "tip_amount": 5.00,
+        "order_type": "phone",
+        "firebaseKey": "",
+        "uid": ""
+      },
+      {
+        "total_amount": 35.00,
+        "date": "2023-03-15",
+        "payment_type": "Cash",
+        "tip_amount": 0.00,
+        "order_type": "in-person",
+        "firebaseKey": "",
+        "uid": ""
+      },
+      {
+        "total_amount": 22.50,
+        "date": "2023-03-14",
+        "payment_type": "Debit Card",
+        "tip_amount": 2.50,
+        "order_type": "in-person",
+        "firebaseKey": "",
+        "uid": ""
+      }
+    ]
+  }
+  
