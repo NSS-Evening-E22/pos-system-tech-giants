@@ -1,4 +1,4 @@
-import getOrders from '../../api/orderData';
+import { getOrders } from '../../api/orderData';
 import addEditorderForm from '../components/forms/orderForm';
 import homeLoggedIn from '../components/shared/pages/homeLoggedIn';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
@@ -24,8 +24,8 @@ const navigationEvents = () => {
   document.querySelector('#search-btn').addEventListener('click', () => {
     const searchValue = document.querySelector('#search').value;
 
-    getOrders.then((data) => data.filter((index) => index.title.toLowerCase().includes(searchValue)
-      || index.definition.toLowerCase().includes(searchValue))).then(viewAllOrders);
+    getOrders().then((data) => data.filter((index) => index.order_name.toLowerCase().includes(searchValue)
+      || index.order_description.toLowerCase().includes(searchValue))).then(viewAllOrders);
     document.querySelector('#search').value = '';
   });
 };

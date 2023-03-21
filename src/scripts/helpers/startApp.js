@@ -1,3 +1,4 @@
+import { getOrders } from '../../api/orderData';
 import logoutButton from '../components/logoutButton';
 import domBuilder from '../components/shared/domBuilder';
 import navBar from '../components/shared/navBar';
@@ -13,7 +14,7 @@ const startApp = () => {
   navBar(); // DYNAMICALLY ADD THE NAV
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
   navEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
-
+  getOrders();
   homeLoggedIn(); // STARTS AS THE APP LOADS
 };
 

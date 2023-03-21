@@ -1,9 +1,10 @@
 import renderToDom from '../../helpers/renderToDom';
 
 const selectOrdTypes = (typeId) => {
-  let domString = `<label for="author">Select an Author</label>
-    <select class="form-control" id="author_id" required>
-    <option value="">Select an Author</option>`;
+  let domString = `<label for="order">Select an Order</label>
+    <select class="form-control" id="order_id" required>
+    <option value="">Select an Order</option>`;
+  // changed all Authors to Order, will need to update differntly than need be.
 
   getOrderTypes().then((ordTypesArray) => {
     ordTypesArray.forEach((types) => {
