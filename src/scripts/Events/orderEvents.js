@@ -2,21 +2,24 @@ import getOrderDetails from '../../api/mergedData';
 import {
   deleteOrders, getOrders, getSingleOrder, updateOrder
 } from '../../api/orderData';
-import editOrderForm from '../components/shared/pages/editOrder';
+import addEditorderForm from '../components/forms/orderForm';
 import { viewAllOrders, viewSingleOrder } from '../components/shared/pages/viewOrders';
 
 const orderEvents = () => {
   document.querySelector('#order-container').addEventListener('click', (e) => {
     if (e.target.id.includes('delete-card')) {
-      console.warn('Clicked Delete');
+      // console.warn('Clicked Delete');
       const [, firebaseKey] = e.target.id.split('--');
+      console.warn(firebaseKey);
       deleteOrders(firebaseKey).then(() => { getOrders().then(viewAllOrders); });
     }
 
     if (e.target.id.includes('edit-card')) {
       const [, firebaseKey] = e.target.id.split('--');
+      console.warn(firebaseKey);
 
-      getSingleOrder(firebaseKey).then((order) => editOrderForm(order));
+      getSingleOrder(firebaseKey).then((orderObj) => addEditorderForm(orderObj));
+      console.warn(getSingleOrder(firebaseKey));
     }
 
     if (e.target.id.includes('details-card')) {
@@ -27,15 +30,16 @@ const orderEvents = () => {
   });
 
   document.querySelector('#form-container').addEventListener('click', (e) => {
-    if (e.target.id.includes('update-card')) {
+    console.warn('This works here!');
+    if (e.target.id.includes('submit-order')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      console.warn(firebaseKey, 'Grabbed key!');
+
       const payload = {
-        title: document.querySelector('#title').value,
-        description: document.querySelector('#description').value,
-        image: document.querySelector('#image').value,
-        price: document.querySelector('#price').value,
-        author_id: document.querySelector('#author_id').value,
-        sale: document.querySelector('#sale').checked,
-        // firebaseKey,
+        name: document.querySelector('#customer-name').value,
+        phone: document.querySelector('#customer-phone').value,
+        email: document.querySelector('#customer-email').value,
+        firebaseKey
       };
 
       updateOrder(payload).then(() => {
