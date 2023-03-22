@@ -1,7 +1,9 @@
+import closeOrderButton from '../components/shared/closeOrderButton';
 import { getOrders } from '../../api/orderData';
 import addEditorderForm from '../components/forms/orderForm';
 import homeLoggedIn from '../components/shared/pages/homeLoggedIn';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
+import renderToDom from '../helpers/renderToDom';
 import signOut from '../helpers/signOut';
 
 const navigationEvents = () => {
@@ -19,6 +21,10 @@ const navigationEvents = () => {
 
   document.querySelector('#welcome-page').addEventListener('click', () => {
     homeLoggedIn();
+  });
+
+  document.querySelector('#close-order').addEventListener('click', () => {
+    closeOrderButton();
   });
 
   document.querySelector('#search-btn').addEventListener('click', () => {
