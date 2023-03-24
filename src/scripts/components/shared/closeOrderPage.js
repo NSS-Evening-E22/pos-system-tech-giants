@@ -7,8 +7,6 @@ const closeOrderPage = () => {
 
   selectPaymentTypesForm();
 
-  closeOrderButton();
-
   renderToDom('#main-container', closeOrderPage);
 };
 
