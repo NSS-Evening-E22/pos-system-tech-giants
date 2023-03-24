@@ -1,15 +1,25 @@
 import clearDom from '../../../helpers/clearDom';
 import renderToDom from '../../../helpers/renderToDom';
 
-const viewRevenue = () => {
+const viewRevenue = (revenueData) => {
   clearDom();
-  const totalRevenue = 0; // fetch from database
-  const totalTips = 0; // fetch from database
-  const totalCallInOrders = 0; // fetch from database
-  const totalWalkInOrders = 0; // fetch from database
-  const cashPayments = 0; // fetch from database
-  const creditPayments = 0; // fetch from database
-  const mobilePayments = 0; // fetch from database
+  let totalRevenue = 0; // fetch from database
+  let totalTips = 0; // fetch from database
+  let totalCallInOrders = 0; // fetch from database
+  let totalWalkInOrders = 0; // fetch from database
+  let cashPayments = 0; // fetch from database
+  let creditPayments = 0; // fetch from database
+  let mobilePayments = 0; // fetch from database
+
+  revenueData.forEach((data) => {
+    totalRevenue += data.totalRevenue;
+    totalTips += data.totalTips;
+    totalCallInOrders += data.totalCallInOrders;
+    totalWalkInOrders += data.totalWalkInOrders;
+    cashPayments += data.cashPayments;
+    creditPayments += data.creditPayments;
+    mobilePayments += data.mobilePayments;
+  });
 
   const domString = `
     <div class="revenue">
