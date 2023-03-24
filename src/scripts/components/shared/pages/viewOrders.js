@@ -1,6 +1,5 @@
 import clearDom from '../../../helpers/clearDom';
 import renderToDom from '../../../helpers/renderToDom';
-// import renderOrderDetailsPage from './orderReview';
 
 const emptyOrders = () => {
   const domString = '<h2>No Data</h2>';
@@ -28,11 +27,7 @@ const viewAllOrders = (array) => {
 };
 
 const viewSingleOrder = () => {
-  // const totalPrice = 'priceTotaled(array)';
   clearDom();
-  const domString = ' <h1> total </h1>';
-
-  renderToDom(domString, '#order-container');
 };
 
 export { emptyOrders, viewAllOrders, viewSingleOrder };
