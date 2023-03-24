@@ -36,10 +36,12 @@ const orderEvents = () => {
       console.warn(firebaseKey, 'Grabbed key!');
 
       const payload = {
-        name: document.querySelector('#order-name').value,
-        phone: document.querySelector('#order-phone').value,
-        email: document.querySelector('#order-email').value,
-        firebaseKey
+        order_name: document.querySelector('#order-name').value,
+        customer_phone: document.querySelector('#customer-phone').value,
+        customer_email: document.querySelector('#customer-email').value,
+        order_type: document.querySelector('#order-type').value,
+        order_status: 'open',
+        firebaseKey,
       };
 
       updateOrder(payload).then(() => {
