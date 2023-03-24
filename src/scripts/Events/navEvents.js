@@ -22,7 +22,7 @@ const navigationEvents = () => {
     homeLoggedIn();
   });
 
-  document.querySelector('#main-container').addEventListener('click', () => {
+  document.querySelector('#close-order').addEventListener('click', () => {
     closeOrderPage();
   });
 

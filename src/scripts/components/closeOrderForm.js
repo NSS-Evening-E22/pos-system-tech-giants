@@ -21,7 +21,7 @@ const selectPaymentTypesForm = (obj = {}) => {
   <button id="closeOrder-button" class="btn btn-danger">Close Order</button>
 </div>
 </form>`;
-  renderToDOM(domString, '#form-container');
+  renderToDOM('#form-container', domString);
 };
 
 export default selectPaymentTypesForm;
