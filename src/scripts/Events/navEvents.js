@@ -3,7 +3,7 @@ import { getOrders } from '../../api/orderData';
 import addEditorderForm from '../components/forms/orderForm';
 import homeLoggedIn from '../components/shared/pages/homeLoggedIn';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
-import renderToDom from '../helpers/renderToDom';
+// import renderToDom from '../helpers/renderToDom';
 import signOut from '../helpers/signOut';
 
 const navigationEvents = () => {
@@ -23,7 +23,7 @@ const navigationEvents = () => {
     homeLoggedIn();
   });
 
-  document.querySelector('#close-order').addEventListener('click', () => {
+  document.querySelector('#closeOrder-button').addEventListener('click', () => {
     closeOrderButton();
   });
 

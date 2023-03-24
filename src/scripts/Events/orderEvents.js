@@ -36,7 +36,7 @@ const orderEvents = () => {
       console.warn(firebaseKey, 'Grabbed key!');
 
       const payload = {
-        name: document.querySelector('#customer-name').value,
+        name: document.querySelector('#order-name').value,
         phone: document.querySelector('#customer-phone').value,
         email: document.querySelector('#customer-email').value,
         firebaseKey
