@@ -26,22 +26,9 @@ const viewAllOrders = (array) => {
   renderToDom('#order-container', domString);
 };
 
-const viewSingleOrder = (obj) => {
+const viewSingleOrder = () => {
   clearDom();
-
-  const orderString = `
-    <div class="card">
-      <div class="card-body">
-        <h5>${obj.order_name}</h5>
-        <p class="card-text">${obj.order_description}</p>
-        <hr>
-        <i id="details-card--${obj.firebaseKey}' class="btn btn-info">Details</i>
-        <i id="edit-card--${obj.firebaseKey}' class="btn">Edit</i>
-        <i id="delete-card--${obj.firebaseKey}' class="btn but-danger">Delete</i>
-      </div>
-    </div>`;
-
-  renderToDom('#order-container', orderString);
+  // itemUpdatePage(); should go here
 };
 
 export { emptyOrders, viewAllOrders, viewSingleOrder };

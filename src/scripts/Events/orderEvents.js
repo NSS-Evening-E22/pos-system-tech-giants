@@ -37,8 +37,8 @@ const orderEvents = () => {
 
       const payload = {
         name: document.querySelector('#order-name').value,
-        phone: document.querySelector('#customer-phone').value,
-        email: document.querySelector('#customer-email').value,
+        phone: document.querySelector('#order-phone').value,
+        email: document.querySelector('#order-email').value,
         firebaseKey
       };
 
