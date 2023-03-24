@@ -3,7 +3,9 @@ import {
   deleteOrders, getOrders, getSingleOrder, updateOrder
 } from '../../api/orderData';
 import addEditorderForm from '../components/forms/orderForm';
-import { viewAllOrders, viewSingleOrder } from '../components/shared/pages/viewOrders';
+import editOrderForm from '../components/shared/pages/editOrder';
+import renderOrderDetailsPage from '../components/shared/pages/orderReview';
+import { viewAllOrders } from '../components/shared/pages/viewOrders';
 
 const orderEvents = () => {
   document.querySelector('#order-container').addEventListener('click', (e) => {
@@ -25,7 +27,13 @@ const orderEvents = () => {
     if (e.target.id.includes('details-card')) {
       const [, firebaseKey] = e.target.id.split('--');
 
-      getOrderDetails(firebaseKey).then(viewSingleOrder);
+      getOrderDetails(firebaseKey).then(editOrderForm);
+    }
+    if (e.target.id.includes('details-card')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      viewAllOrders(firebaseKey).then((data) => {
+        renderOrderDetailsPage(data, firebaseKey);
+      });
     }
   });
 
@@ -37,8 +45,8 @@ const orderEvents = () => {
 
       const payload = {
         name: document.querySelector('#order-name').value,
-        phone: document.querySelector('#order-phone').value,
-        email: document.querySelector('#order-email').value,
+        phone: document.querySelector('#customer-phone').value,
+        email: document.querySelector('#customer-email').value,
         firebaseKey
       };
 
