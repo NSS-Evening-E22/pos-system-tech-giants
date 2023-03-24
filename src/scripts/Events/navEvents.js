@@ -3,6 +3,9 @@ import addEditorderForm from '../components/forms/orderForm';
 import closeOrderPage from '../components/shared/closeOrderPage';
 import homeLoggedIn from '../components/shared/pages/homeLoggedIn';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
+
+// import renderToDom from '../helpers/renderToDom';
+
 import signOut from '../helpers/signOut';
 
 const navigationEvents = () => {
@@ -21,8 +24,8 @@ const navigationEvents = () => {
   document.querySelector('#welcome-page').addEventListener('click', () => {
     homeLoggedIn();
   });
-
-  document.querySelector('#main-container').addEventListener('click', () => {
+  
+  document.querySelector('#close-order').addEventListener('click', () => {
     closeOrderPage();
   });
 
