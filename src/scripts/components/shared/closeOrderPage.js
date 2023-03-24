@@ -1,5 +1,5 @@
 import clearDom from '../../helpers/clearDom';
-import renderToDom from '../../helpers/renderToDom';
+// import renderToDom from '../../helpers/renderToDom';
 import selectPaymentTypesForm from '../closeOrderForm';
 
 const closeOrderPage = () => {
@@ -7,7 +7,7 @@ const closeOrderPage = () => {
 
   selectPaymentTypesForm();
 
-  renderToDom('#main-container', closeOrderPage);
+  // renderToDom('#main-container', closeOrderPage);
 };
 
 export default closeOrderPage;

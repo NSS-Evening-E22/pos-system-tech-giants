@@ -24,7 +24,7 @@ const navigationEvents = () => {
   document.querySelector('#welcome-page').addEventListener('click', () => {
     homeLoggedIn();
   });
-  
+
   document.querySelector('#close-order').addEventListener('click', () => {
     closeOrderPage();
   });
