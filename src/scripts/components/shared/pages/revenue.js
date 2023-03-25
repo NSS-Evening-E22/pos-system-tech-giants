@@ -3,22 +3,28 @@ import renderToDom from '../../../helpers/renderToDom';
 
 const viewRevenue = (revenueData) => {
   clearDom();
-  let totalRevenue = 0; // fetch from database
-  let totalTips = 0; // fetch from database
-  let totalCallInOrders = 0; // fetch from database
-  let totalWalkInOrders = 0; // fetch from database
-  let cashPayments = 0; // fetch from database
-  let creditPayments = 0; // fetch from database
-  let mobilePayments = 0; // fetch from database
+  let callInCount = 0;
+  let walkInCount = 0;
+  let cashPaymentCount = 0;
+  let creditPaymentCount = 0;
+  let mobilePaymentCount = 0;
+  let totalRevenue = revenueData.reduce((a, b) => a + b.total_amount, 0); // fetch from database
+  let totalTips = revenueData.reduce((a, b) => a + b.tip_amount, 0); // fetch from database
 
   revenueData.forEach((data) => {
     totalRevenue += data.totalRevenue;
     totalTips += data.totalTips;
-    totalCallInOrders += data.totalCallInOrders;
-    totalWalkInOrders += data.totalWalkInOrders;
-    cashPayments += data.cashPayments;
-    creditPayments += data.creditPayments;
-    mobilePayments += data.mobilePayments;
+    if (data.order_type === 'in-person') {
+      callInCount += 1;
+    } else if (data.order_type === 'in-person') {
+      walkInCount += 1;
+    } else if (data.payment_type === 'Cash') {
+      cashPaymentCount += 1;
+    } else if (data.payment_type === 'Debit Card') {
+      creditPaymentCount += 1;
+    } else if (data.payment_type === 'Credit Card') {
+      mobilePaymentCount += 1;
+    }
   });
 
   const domString = `
@@ -28,14 +34,14 @@ const viewRevenue = (revenueData) => {
       <h1>TOTAL REVENUE: $${totalRevenue.toFixed(2)}</h1>
       <br>
       <p>TOTAL TIPS: $${totalTips.toFixed(2)}</p>
-      <p>TOTAL CALL IN ORDERS: ${totalCallInOrders}</p>
-      <p>TOTAL WALK IN ORDERS: ${totalWalkInOrders}</p>
+      <p>TOTAL CALL IN ORDERS: ${callInCount}</p>
+      <p>TOTAL WALK IN ORDERS: ${walkInCount}</p>
       <br>
       <p>PAYMENT TYPES:</p>
       <ul>
-        <li>CASH - ${cashPayments}</li>
-        <li>CREDIT - ${creditPayments}</li>
-        <li>MOBILE - ${mobilePayments}</li>
+        <li>CASH - ${cashPaymentCount}</li>
+        <li>CREDIT - ${creditPaymentCount}</li>
+        <li>MOBILE - ${mobilePaymentCount}</li>
       </ul>
     </div>
   `;

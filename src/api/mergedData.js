@@ -1,5 +1,6 @@
 import { getItemsByOrder } from './itemData';
 import { getSingleOrder } from './orderData';
+// import getPayments from './paymentData';
 
 const getOrderDetails = (firebaseKey) => new Promise((resolve, reject) => {
   getSingleOrder(firebaseKey)
@@ -18,3 +19,11 @@ const getOrderDetails = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 export default getOrderDetails;
+
+// const getRevenueDetails = () => {
+//   Promise.all([getItems, getOrders, getPayments])
+//   .then(data => {
+//     const revenueData = [];
+
+//   })
+// }
