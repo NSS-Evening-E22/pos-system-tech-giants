@@ -8,7 +8,7 @@ import renderOrderDetailsPage from '../components/shared/pages/orderReview';
 import { viewAllOrders } from '../components/shared/pages/viewOrders';
 
 const orderEvents = () => {
-  document.querySelector('#order-container').addEventListener('click', (e) => {
+  document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('delete-card')) {
       // console.warn('Clicked Delete');
       const [, firebaseKey] = e.target.id.split('--');
@@ -37,7 +37,7 @@ const orderEvents = () => {
     }
   });
 
-  document.querySelector('#form-container').addEventListener('click', (e) => {
+  document.querySelector('#main-container').addEventListener('click', (e) => {
     console.warn('This works here!');
     if (e.target.id.includes('submit-order')) {
       const [, firebaseKey] = e.target.id.split('--');
@@ -48,6 +48,21 @@ const orderEvents = () => {
         customer_phone: document.querySelector('#customer-phone').value,
         customer_email: document.querySelector('#customer-email').value,
         order_type: document.querySelector('#order-type').value,
+        order_status: 'open',
+        firebaseKey,
+      };
+
+      updateOrder(payload).then(() => {
+        getOrders().then(viewAllOrders);
+      });
+    }
+    if (e.target.id.includes('update-orders')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      console.warn(firebaseKey, 'Grabbed key!');
+
+      const payload = {
+        order_name: document.querySelector('#order-name').value,
+        customer_price: document.querySelector('#order-price').value,
         order_status: 'open',
         firebaseKey,
       };
