@@ -1,6 +1,6 @@
 import renderToDom from '../../../helpers/renderToDom';
 import loginButton from '../../loginButton';
-import logo from '../../../../../instructions/hhpw-record.png';
+import logo from '../../../../../documentation/logo.png';
 
 const homeLoggedOut = () => {
   document.querySelector('#app').innerHTML = '';
