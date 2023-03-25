@@ -15,7 +15,7 @@ const viewAllOrders = (array) => {
     <div class="card">
       <div class="card-body">
         <h5>${order.order_name}</h5>
-        <p class="card-text">${order.order_description}</p>
+        <p class="card-text">${order.customer_email}</p>
         <hr>
         <i class ='fas fa-forward' id="details-card--${order.firebaseKey}" class="btn btn-info">Details</i>
         <i class ='fas fa-pause' id="edit-card--${order.firebaseKey}" class="btn">Edit</i>

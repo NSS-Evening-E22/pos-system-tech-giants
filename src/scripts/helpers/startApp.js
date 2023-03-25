@@ -4,14 +4,12 @@ import domBuilder from '../components/shared/domBuilder';
 import navBar from '../components/shared/navBar';
 import homeLoggedIn from '../components/shared/pages/homeLoggedIn';
 import domEvents from '../Events/domEvents';
-import formEvents from '../Events/formEvents';
 import navigationEvents from '../Events/navEvents';
 import orderEvents from '../Events/orderEvents';
 
 const startApp = () => {
   domBuilder(); // BUILD THE DOM
   domEvents(); // ADD THE EVENT LISTENTERS TO THE DOM
-  formEvents(); // ADD FORM EVENT LISTENTERS TO THE DOM
   orderEvents(); // CRUD ON INDIVIDUAL ORDERS
   navBar(); // DYNAMICALLY ADD THE NAV
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
