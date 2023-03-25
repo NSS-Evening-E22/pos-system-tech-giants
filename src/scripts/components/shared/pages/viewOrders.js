@@ -28,7 +28,6 @@ const viewAllOrders = (array) => {
 
 const viewSingleOrder = () => {
   clearDom();
-  // itemUpdatePage(); should go here
 };
 
 export { emptyOrders, viewAllOrders, viewSingleOrder };
